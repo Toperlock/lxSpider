@@ -43,6 +43,8 @@ def analysis(webName,book_name,title,urlList):
     global times
     html = etree.HTML(requests.get(urlList,HEADER).content.decode(rules[webName]['code'],errors='ignore'))
     chapter = html.xpath(rules[webName]['chapter'])
+    if webName == 'piaotia': #迫不得已的奇葩写法
+        chapter = chapter[70: -45]
     if chapter == []:
         times+=1
         if times>=50:
