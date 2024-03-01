@@ -17,7 +17,7 @@ def handledata(key,url):
             if re.findall(key,i.text): #根据关键字进行筛选
                 '''if i['href'][:4] == 'http':
                     re_list.append(i.text + ':' + i['href'])'''
-                re_list.append(i.text + ':' +'https://www.piaotia.com/' + i['href'])
+                re_list.append(i.text + ':' + i['href'])
         except:
             continue
 
@@ -25,12 +25,12 @@ def handledata(key,url):
         for j in range(len(re_list)):
             print(str(j)+":"+re_list[j])
         print("-"*50)
-        print("请复制下载链接到浏览器下载")
+        print("请复制下载链接到方框内下载")
     else:
         print('未找到相关小说')
 
 def search(name):
     key = name
     #url = "https://www.xbiquge.la/modules/article/waps.php"
-    url = "https://www.piaotia.com/modules/article/search.php"
+    url = "https://www.xbiqugu.info/modules/article/waps.php"
     handledata(key,url)
