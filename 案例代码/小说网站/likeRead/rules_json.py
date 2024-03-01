@@ -2,15 +2,15 @@ import json
 
 rules = {
     "piaotia":{
-        "title":'//div[@class="centent"]/ul/li//text()',
+        "title":'//div[@class="centent"]/ul/li//text()', #2024.2.29修改
         "urlList":'//div[@class="centent"]/ul/li/a/@href',
         "book_name":'//div[@class="title"]/h1/text()',
         "realm":"https://www.piaotia.com/",
-        "chapter":'//div[@id="content"]/text()',
+        "chapter":'//text()', #迫不得已操作
         "code":"gbk"
     },
     "xbiquge":{
-        "title":'//div[@id="list"]//dd//text()',
+        "title":'//div[@id="list"]//dd//text()', #2024.2.29修改
         "urlList":'//div[@id="list"]//dd/a/@href',
         "book_name":'//div[@id="info"]//h1/text()',
         "realm":"http://www.xbiquge.bz/",
@@ -18,34 +18,18 @@ rules = {
         "code":"gbk"
     },
     "xbiqugu":{
-        "title":'//div[@id="list"]//dd//text()',
+        "title":'//div[@id="list"]//dd//text()', #2024.2.29修改
         "urlList":'//div[@id="list"]//dd/a/@href',
         "book_name":'//div[@id="info"]//h1/text()',
         "realm":"http://www.xbiqugu.info/",
         "chapter":'//div[@id="content"]/text()',
         "code":"utf-8"
     },
-    'biquwx':{
-        "title":'//div[@id="list"]//dd//text()',
+    'xbiquzw':{
+        "title":'//div[@id="list"]//dd//text()', #2024.3.1修改
         "urlList":'//div[@id="list"]//dd//a/@href',
         "book_name":'//div[@id="info"]//h1/text()',
-        "realm":"https://www.biquwx.la/",
-        "chapter":'//div[@id="content"]//text()',
-        "code":"utf-8"
-    },
-    '9biquge':{
-        "title":'//div[@id="list"]//dd//a/text()',
-        "urlList":'//div[@id="list"]//dd//a/@href',
-        "book_name":'//div[@id="info"]//h1/text()',
-        "realm":"https://www.9biquge.com/",
-        "chapter":'//div[@id="content"]//text()',
-        "code":"utf-8"
-    },
-    'ibswtan':{
-        "title":'//div[@id="list"]//dd//text()',
-        "urlList":'//div[@id="list"]//dd//a/@href',
-        "book_name":'//div[@id="info"]//h1/text()',
-        "realm":"https://www.ibswtan.com/",
+        "realm":"http://www.xbiquzw.com/",
         "chapter":'//div[@id="content"]//text()',
         "code":"utf-8"
     },
@@ -56,22 +40,6 @@ rules = {
         "realm":"https://www.51shucheng.net/",
         "chapter":'//div[@class="neirong"]//text()',
         "code":"utf-8"
-    },
-    'quanxiaoshuo':{
-        "title":'//div[@class="chapters"]/div/text()',
-        "urlList":'//div[@class="chapters"]/div/a/@href',
-        "book_name":'//div[@class="text t_c"]/h1/a',
-        "realm":"http://quanxiaoshuo.org/",
-        "chapter":'//div[@class="content"]/text()',
-        "code":"gbk"
-    },
-    'xiangguxs':{
-        "title":'//div[@id="list"]//dd//text()',
-        "urlList":'//div[@id="list"]//dd//a/@href',
-        "book_name":'//div[@id="info"]//h1/text()',
-        "realm":"https://www.xiangguxs.com/",
-        "chapter":'//div[@id="content"]//text()',
-        "code":"gbk"
     }
 }
 with open('./static/rules.json', 'w', encoding='utf-8') as fp:
