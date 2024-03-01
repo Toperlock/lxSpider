@@ -8,9 +8,29 @@ import platform
 
 if __name__ == '__main__':
     root = Tk()
+    curWidth = 450
+    curHight = 170
     root.title("小说下载器")
-    root.geometry("450x170")
-    root.geometry("+100+150")
+    if not curWidth:
+        '''获取窗口宽度，默认200'''
+        curWidth = root.winfo_width()
+    if not curHight:
+        '''获取窗口高度，默认200'''
+        curHight = root.winfo_height()
+    # print(curWidth, curHight)
+
+    # 获取屏幕宽度和高度
+    scn_w, scn_h = root.maxsize()
+    # print(scn_w, scn_h)
+
+    # 计算中心坐标
+    cen_x = (scn_w - curWidth) / 2
+    cen_y = (scn_h - curHight) / 2
+    # print(cen_x, cen_y)
+
+    # 设置窗口初始大小和位置
+    size_xy = '%dx%d+%d+%d' % (curWidth, curHight, cen_x, cen_y)
+    root.geometry(size_xy)
 
     # 做成背景的装饰
     pic1 = Image.open('static/bg.png').resize((600, 600))  # 加载图片并调整大小至窗口大小
@@ -29,8 +49,7 @@ if __name__ == '__main__':
     def tk_search():
         search_result = entry1.get().replace(" ", "").replace('\n', '').replace('"', '')
         if search_result:
-            if search.search(search_result):
-                print("请复制下载链接到浏览器下载")
+            search.search(search_result)
         else:
             print("请输入小说名")
 
@@ -49,6 +68,7 @@ if __name__ == '__main__':
             book = False
             try:
                 book = chapterList.classify(search_result)
+                print("保存结束！")
             except:
                 print('下载异常')
             if book:
