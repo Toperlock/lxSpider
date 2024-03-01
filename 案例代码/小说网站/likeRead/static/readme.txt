@@ -19,9 +19,9 @@
 
 ## 目前支持爬取的网站
 
-https://www.piaotia.com/    24年2-29更新 未解决章节内容获取失败
+https://www.piaotia.com/    24年2-29更新
 http://www.xbiquge.bz/      24年2-29更新
 http://www.xbiqugu.info/    24年2-29更新
-http://www.xbiquzw.com/
-http://www.jjwxc.net/
+http://www.xbiquzw.com/     24年3-1更新
+http://www.jjwxc.net/       没做
 https://www.51shucheng.net/ #需要在xpath按需修改"title","urlList"，大部分的小说不一样
