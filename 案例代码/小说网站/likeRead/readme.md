@@ -19,14 +19,17 @@
 
 ## 目前支持爬取的网站
 
-http://www.xbiquge.la/
-http://www.biquge.info/
-http://www.ikuaiyan.com/
-http://www.booksky.cc/
-https://www.9biquge.com/
+https://www.piaotia.com/    24年2-29更新 未解决章节内容获取失败
+
+http://www.xbiquge.bz/      24年2-29更新
+
+http://www.xbiqugu.info/    24年2-29更新
+
+http://www.xbiquzw.com/
+
 http://www.jjwxc.net/
-https://www.taiuu.com/
-https://www.shouda8.com/
+
+https://www.51shucheng.net/ #需要在xpath按需修改"title","urlList"，大部分的小说不一样
 
 ---
 
