@@ -51,6 +51,8 @@ def analysis(webName,book_name,title,urlList):
             analysis(webName,book_name,title,urlList)
             return
     chapter_cont = ''
+    if '笔趣阁 www.xbiquge.bz' in chapter[0]: # xbiquge 正文的第一行去掉，按需修改
+        chapter = chapter[1:]
     for i in chapter:
         if len(i) >= 2:
             chapter_cont = chapter_cont + "\n" + i.strip()
