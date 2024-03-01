@@ -60,17 +60,17 @@ def analysis(webName,url):
     realm = rules[webName]['realm']
     store_all = []
     for i in range(len(title)): # xbiquge 的最新章节舍去，按需修改 注：中断后需去掉索引值才能与原文件继续保存
-        if webName == 'ibswtan':
-            store = {
-                "title":title[i].strip(),
-                "urlList":realm+url.split("com")[1]+urlList[i]
-            }
-        elif webName == 'piaotia':
+        if webName == 'piaotia':
             store = {
                 "title":title[i].strip(),
                 "urlList":url+urlList[i]
             }
         elif webName == 'xbiquge':
+            store = {
+                "title":title[i].strip(), # xbiquge 的最新章节舍去，按需修改 注：中断后需去掉索引值才能与原文件继续保存
+                "urlList":url+urlList[i]
+            }
+        elif webName == 'xbiquzw':
             store = {
                 "title":title[i].strip(), # xbiquge 的最新章节舍去，按需修改 注：中断后需去掉索引值才能与原文件继续保存
                 "urlList":url+urlList[i]
